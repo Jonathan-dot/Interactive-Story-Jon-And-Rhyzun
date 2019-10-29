@@ -8,12 +8,6 @@
 </head>
 <body>
     
-
-
-    function start();
-    function makeDecision() {
-        move();
-    }
 <div id="story">
 
 </div>
@@ -29,10 +23,18 @@
 
         let buttonContainer = document.getElementById("buttons");
 
-        for(let i = 0; i < 3; i++){
+       const story = {
+           intro : {
 
-           
-        }
+            text : "",
+            choices : ["one", "two", "three"]
+
+           }
+       }
+
+       for(let choice of story.intro.choices){
+           makeButton(choice, choice)
+       }
 
 function makeButton(btnText){
     let button = document.createElement
@@ -41,8 +43,20 @@ function makeButton(btnText){
     button.innerHTML = btnText
 
     buttonContainer.appendChild(button);
-}
+    button.addEventListener ("click", function(){
+        alert("Chose" + choice);
+    });
+        }
 
+        function showStory(text){
+            let storyItem = document.createElement("p");
+
+            storyItem.innerText = text;
+
+            storyContainer.appendChild(storyItem;)
+        }
+
+            showStory(story.intro.text)
     </script>
     
 </body>
