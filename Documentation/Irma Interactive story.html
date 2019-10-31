@@ -24,13 +24,6 @@
 </div>
     <script>
 
-       const story = {
-            intro: {
-                text : `bruh`
-            }
-
-
-      }
         
         let storyContainer = document.getElementById("story");
         
@@ -38,49 +31,48 @@
 
         let buttonContainer = document.getElementById("buttons");
 
+        let history = ["intro"];
+
        const story = {
            intro : {
+            text : "Would you like to start?",
+            choices : [
+              
+                ["yes", "Start"],
+                 ["no", "leave"],
+                ]
+           },
 
-            text : "",
-            choices : ["yes", "no"]
+        Start : {
+    text : "Would you like to ?",
+        choices : [
+        ["Starts", "yes2"],
+
+            
+
+        ]
 
            }
        }
 
+       
        for(let choice of story.intro.choices){
            makeButton(choice, choice)
        }
 
     function makeButton(btnText){
-        let button = document.createElement
-        ("button");
-
-    function displayChoice(){
-        let yes = document.createElement
-        ("");
-
-    }
-
-    button.innerHTML = btnText
+        let button = document.createElement("button");
+    button.innerHTML = btnText;
 
     buttonContainer.appendChild(button);
-    button.addEventListener ("click", function(){
-        alert("Chose" + choice);
+
+    button.addEventListener ("click", function() {
+        history.push(choice);
+        showStory();
     });
+}
 
 
-    
-        }
-
-//      function showStory(text){
-//        let storyItem = document.createElement("p");
-//
-//          storyItem.innerText = text;
-//
-//           storyContainer.appendChild(storyItem;)
-//      }
-//
-//         showStory(story.intro.text)
     </script>
     
 </body>
