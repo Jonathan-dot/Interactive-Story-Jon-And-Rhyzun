@@ -7,8 +7,14 @@
     <title>Document</title>
 </head>
 <body>
+
+    
     
 <div id="story">
+
+    <P>
+        
+    </P>
 
 </div>
 
@@ -17,6 +23,9 @@
 
 </div>
     <script>
+
+        const story = 
+        
         let storyContainer = document.getElementById("story");
         
         storyContainer.innerHTML = "Would you like to start?";
@@ -26,7 +35,7 @@
        const story = {
            intro : {
 
-            text : "",
+            text : "dsdds",
             choices : ["yes", "no"]
 
            }
@@ -36,9 +45,15 @@
            makeButton(choice, choice)
        }
 
-function makeButton(btnText){
-    let button = document.createElement
-    ("button");
+    function makeButton(btnText){
+        let button = document.createElement
+        ("button");
+
+    function displayChoice(){
+        let yes = document.createElement
+        ("");
+
+    }
 
     button.innerHTML = btnText
 
@@ -46,6 +61,9 @@ function makeButton(btnText){
     button.addEventListener ("click", function(){
         alert("Chose" + choice);
     });
+
+
+    
         }
 
 //      function showStory(text){
