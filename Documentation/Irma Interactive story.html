@@ -45,7 +45,7 @@ The Battle Of Irma
            },
            Start : {
                  text : "Would you like to ?",
-            buildStory : [
+            choice : [
                 ["Starts", "yes2"],
 
             
@@ -57,7 +57,7 @@ The Battle Of Irma
        }
 
 
-    function makeButton(btnText){
+    function makeButton(btnText, choices){
         let button = document.createElement("button");
     button.innerHTML = btnText;
 
