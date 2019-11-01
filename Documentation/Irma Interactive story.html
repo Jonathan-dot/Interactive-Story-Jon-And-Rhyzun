@@ -14,13 +14,6 @@ The Battle Of Irma
     
     
 <div id="story">
-
-    <p>
-     bruh
-
-    </p>
-     
-
 </div>
 
 <div id="buttons">
@@ -44,8 +37,8 @@ The Battle Of Irma
               ]
            },
            Start : {
-                 text : "Would you like to ?",
-            choice : [
+                 text : "hi",
+            choices : [
                 ["Starts", "yes2"],
 
             
@@ -64,7 +57,7 @@ The Battle Of Irma
     buttonContainer.appendChild(button);
 
     button.addEventListener ("click", function() {
-        history.push(choice);
+        history.push(choices);
         showStory(); 
     });
 }
@@ -79,18 +72,17 @@ The Battle Of Irma
             buttonContainer.innerHTML = ""; 
 
             
-            for(let page of history){ 
+           for(let page of history){ 
                 buildStory(story[page].text);
             }
             
-            for(let choice of story[currentPage].choices){ 
-                makeButton(choice[0], choice[2])
+           for(let choices of story[currentPage].choices){ 
+                makeButton(choices[0], choices[2])
 
             }
         }
         showStory();
-
-
+      
     </script>
     
 </body>
