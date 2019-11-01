@@ -9,7 +9,7 @@
 <body>
 
 <h2>
-The Of Irma 
+The Battle Of Irma 
 </h2>
     
     
@@ -49,9 +49,7 @@ The Of Irma
                 ["Starts", "yes2"],
 
             
-            function choice(){
-
-            }
+          
 
         ]
 
@@ -67,7 +65,7 @@ The Of Irma
 
     button.addEventListener ("click", function() {
         history.push(choice);
-        showStory();
+        showStory(); 
     });
 }
      function buildStory(text) {
@@ -79,6 +77,7 @@ The Of Irma
             let currentPage = history[history.length - 1]; 
             storyContainer.innerHTML = ""; //
             buttonContainer.innerHTML = ""; 
+
             
             for(let page of history){ 
                 buildStory(story[page].text);
@@ -86,6 +85,7 @@ The Of Irma
             
             for(let choice of story[currentPage].choices){ 
                 makeButton(choice[0], choice[2])
+
             }
         }
         showStory();
