@@ -48,6 +48,7 @@ The Battle Of Irma
                 ["Red111", "talk to merchant in need of help"]
                 ]
            },
+           //red path
            Red111 : {
                  text : "The merchant asks for help with killing a monster in the woods that terrorizes his shop.",
             choices : [
@@ -65,10 +66,40 @@ The Battle Of Irma
            Red33 : {
                  text : "You go into the woods to kill the monster and succeed ",
             choices : [
-                ["Red33D", "You go into the woods to kill the monster and succeed"],
+                ["Red33D", "Return to the Merchants shop..."],
               ]
            },
- 
+           Red33D : {
+                 text : "The shop keeper takes his boomstick and allows you to pick between a magic fruit or a sack of potatoe to bring along your journey.",
+            choices : [
+                ["Red4B", "take the sack of potatoes"],
+                ["Red44B", "take the magic fruit "] 
+              ]
+           },
+           Red4B : {
+                 text : "After doing that quest you decide to explore the town and find a bounty poster for a witch with horse legs named Irma",
+            choices : [
+                ["Red5", "Go fight Irma with the gear you have."],
+                ["Red55", "Go explore more in the town to get different gear to fight Irma."] 
+              ]
+           },
+           
+           Red5 : {
+                 text : "You find Irma in the woods and since all you have is a bunch of food you try to have a meal with that wicked witch...",
+            choices : [
+                ["Red5D", "Continue"], 
+              ]
+           },
+          Red5D : {
+                 text : "She agrees however when your back is turned she changes you into a fishstick and eats you ending your journey completly",
+            choices : [
+                ["", "Restart outside of Irmas forest?"],
+                ["", "Replay from the start"] 
+              ]
+           },
+
+
+
 
            Red3 : {
                  text : "You go into the woods to kill the monster and you eventually find it.",
